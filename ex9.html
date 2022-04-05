@@ -1,0 +1,41 @@
+<!-- 9. De schimbat documentul dat în aşa mod că informația introdusă să apară in fereastra confirm cu întrebarea dacă informația dată este corectă.   -->
+
+<HTML>
+<HEAD>
+<TITLE>Exemplu de FORMULAR</TITLE>
+
+<SCRIPT language="Javascript">
+
+
+
+function writeRadio(x)
+{
+ n="virsta este "+x;
+ confirm(n + "\nInformatia data este corecta?")
+}
+
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+ <div>
+<h3> Exemplu de formular</h3>
+  <form  name="myform" > 
+  <p>Întroduceţi vîrsta:<br/>
+    <input type="radio" name="raspuns" value="15" checked="checked" onClick="writeRadio('sub 15')">sub 15 ani<br/>
+    <input type="radio" name="raspuns" value="15-20" onClick="writeRadio('15-20')">15-20 ani<br/>
+    <input type="radio" name="raspuns" value="20-25" onClick="writeRadio('20-25')">20-25 ani<br/>
+    <input type="radio" name="raspuns" value="25-35" onClick="writeRadio('25-35')">25-35 ani<br/>
+    <input type="radio" name="raspuns" value="35-45" onClick="writeRadio('35-45')">35-45 ani<br/>
+    <input type="radio" name="raspuns" value="45" onClick="writeRadio('peste 45')">peste 45 ani<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<span id="content2">&nbsp;</span>
+   </p>
+</form>
+    
+ </div> 
+
+</BODY>
+</HTML>

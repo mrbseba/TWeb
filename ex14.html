@@ -1,0 +1,23 @@
+<!-- 4. De adăugat în documentul dat încă un alert care afişează textul din al treilea paragraf: Hai sa studiem procesarea DOM!. -->
+
+<html>
+<body id="main">
+
+<h1> Document despre DOM </h1>
+<p>Hai sa studiem DOM!</p>
+<p>Hai sa studiem elementele DOM!</p> 
+<p>Hai sa studiem procesarea DOM!</p> 
+<p>Hai sa studiem elementele de utilizare DOM in JavaScript!</p> 
+<input type="button" onclick="go()" value="enter">
+
+<script type="text/javascript">
+function go(){
+  let  x=document.querySelector('#main :nth-child(4)');
+alert(x.innerHTML);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 7. De schimbat documentul dat în aşa mod că dacă facem click pe un link să apară textul “ The Solar System comprises the Sun and its planetary system of eight planets, as well as a number of dwarf planets, satellites (moons), and other objects that orbit the Sun.” -->
+
+<html>
+<head>
+<script type="text/javascript">
+function writeText(txt)
+{
+document.getElementById("desc").innerHTML=txt;
+}
+</script>
+</head>
+
+<body>
+<img src ="planets.gif" width ="145" height ="126" alt="Planets" usemap="#planetmap" />
+
+<map name="planetmap">
+<area shape ="rect" coords ="0,0,82,126"
+onc="writeText('The Sun and the gas giant planets like Jupiter are by far the largest objects in our Solar System.')"
+ target ="_blank" alt="Sun" />
+
+<area shape ="circle" coords ="90,58,3"
+onc="writeText('The planet Mercury is very difficult to study from the Earth because it is always so close to the Sun.')"
+ target ="_blank" alt="Mercury" />
+
+<area shape ="circle" coords ="124,58,8"
+onc="writeText('Until the 1960s, Venus was often considered a twin sister to the Earth because Venus is the nearest planet to us, and because the two planets seem to share many characteristics.')"
+ target ="_blank" alt="Venus" />
+</map> 
+
+<p id="desc">Mouse over the sun and the planets and see the different descriptions.</p>
+
+</body>
+</html>

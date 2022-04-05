@@ -1,0 +1,43 @@
+<!-- 10. De adăugat în documentul dat un buton şi de schimbat documentul dat în aşa mod că informația introdusă să apară in fereastra alert doar la apăsarea butonului dat.   -->
+
+
+<HTML>
+<HEAD>
+<TITLE>Exemplu de FORMULAR</TITLE>
+
+<SCRIPT language="Javascript">
+
+function writeCheckbox()
+{
+   const x = document.querySelectorAll('input[name="optiunea1"]:checked');
+   let values = [];
+   x.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            alert(values);
+}
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+ <div>
+<h3> Exemplu de formular</h3>
+  <form  name="myform" >
+
+   <p>Unde v&#259 petreceţi concediul de obicei?<br/>
+     <input type="checkbox" name="optiunea1" value="dasf" >La mare<br/>
+     <input type="checkbox" name="optiunea1" value="dasfge">La munte<br/>
+     <input type="checkbox" name="optiunea1" >&#206n str&#259in&#259tate<br/>
+     <input type="checkbox" name="optiunea1" >La &#355;ar&#259<br/>
+     <input type="checkbox" name="optiunea1" >Acas&#259<br/>
+   </p>
+   <input type="button" value="submit" onclick="writeCheckbox()">
+</form>
+    
+ </div> 
+
+</BODY>
+</HTML>

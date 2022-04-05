@@ -1,0 +1,28 @@
+<!-- 5. De schimbat documentul dat în aşa mod că dacă nu a fost întrodus nici un text să apară un alert. -->
+
+
+<html>
+<head>
+<title>Script JS</title>
+<script type="text/javascript">
+
+function ScrieDiv(){
+valText = document.formular2.text2.value;
+if(valText == ""){
+    alert("Nu sa introdus nimic");
+}
+else
+document.getElementById("div_id2").innerHTML = valText;
+
+}
+
+</script>
+</head>
+<body>
+<div id="div_id2">Aici va apare textul din formular</div><br>
+<form name="formular2">
+<textarea cols="30" rows="5" name="text2" id="textul2"></textarea> <br>
+<input type="button" value="Afiseaza" onclick="ScrieDiv();" />
+</form>
+</body>
+</html>

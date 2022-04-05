@@ -1,0 +1,25 @@
+<!-- 1. De modificat documentul dat în aşa mod că să se afişeze un întrerupător cu care se poate de aprins şi de stins becul cu mouse. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function lighton()
+{
+        document.getElementById('myimage').src="pic_bulbon.gif";
+}
+function lightoff()
+{
+        document.getElementById('myimage').src="pic_bulboff.gif";
+}
+
+</script>
+</head>
+
+<body>
+<img id="myimage"  src="pic_bulboff.gif"  />
+<input type="button" onclick= "lighton()" ondblclick="lightoff()" value="Intrerupator"/>
+<p>Click and hold to turn on the light!</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- 2. De modificat documentul dat în aşa mod că să se afişeze patru ceasuri cu ora curentă în oraşele New York, Tokio, Paris şi Chişinău. -->
+
+<html>
+<head>
+<style type="text/css">
+
+
+</style>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+const ceasNY = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+const ceasT = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' });
+const ceasP = new Date().toLocaleString('en-US', { timeZone: 'Europe/Paris' });
+
+
+document.getElementById('ceasChisinau').innerHTML=h+":"+m+":"+s;
+document.getElementById('ceasNewYork').innerHTML=ceasNY;
+document.getElementById('ceasTokyo').innerHTML=ceasT;
+document.getElementById('ceasParis').innerHTML=ceasP;
+
+
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt">
+    Chisinau<div id="ceasChisinau"></div>
+New York<div id="ceasNewYork"></div>
+Tokyo<div id="ceasTokyo"></div>
+Paris<div id="ceasParis"></div>
+</div>
+</body>
+</html>

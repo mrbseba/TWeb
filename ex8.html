@@ -1,0 +1,42 @@
+<!-- 8. De schimbat documentul dat în aşa mod că dacă parola introdusă este mai scurtă decît 6 caractere să apară un alert cu observatie şi propunerea de a re-intriduce parola.   -->
+
+<HTML>
+<HEAD>
+<TITLE>Exemplu de FORMULAR</TITLE>
+
+<SCRIPT language="Javascript">
+
+function writeText()
+{
+ n="s-a cules "+window.document.myform.exemplu1.value;
+ document.getElementById("content").innerHTML=n;
+}
+
+function writePass()
+{
+ n=window.document.myform.exemplu2.value;
+ if(n.length < 6){
+    alert("parola este prea scurta");
+ }
+ 
+}
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+ <div>
+<h3> Exemplu de formular</h3>
+  <form  name="myform" > 
+  <p> <input name="exemplu1" type="text" value="Camp de editare" onBlur="writeText()" size="25" maxlength="30"/> &nbsp;&nbsp;&nbsp; 
+  <span id="content">&nbsp;&nbsp;&nbsp;</span></p> 
+  <p> <input name="exemplu2" type="password" value="Parola" onBlur="writePass()" size="15" maxlength="15"/></p>
+
+  </form>
+    
+ </div> 
+
+</BODY>
+</HTML>

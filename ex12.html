@@ -1,0 +1,96 @@
+ 
+<!-- 2. De modificat documentul dat în aşa mod că să se afişeze patru ceasuri în jur de textul dat. -->
+
+
+<html>
+<head>
+<style type="text/css">
+#txt {
+text-align:center;
+ font-size: 32px;
+ font-weight:bold;
+ color: green;
+
+}
+#ceas, #ceas4 {
+    margin-left: auto;
+    margin-right: auto;
+	width:250px;
+text-align:center;
+border:5px solid blue;
+border-radius:15px;
+ font-size: 50px;
+ font-weight:bold;
+ color: green;
+ 
+}
+#ceas2{
+    float: right;
+	width:250px;
+text-align:center;
+border:5px solid blue;
+border-radius:15px;
+ font-size: 50px;
+ font-weight:bold;
+ color: green;
+}
+#ceas3{
+    float: left;
+	width:250px;
+text-align:center;
+border:5px solid blue;
+border-radius:15px;
+ font-size: 50px;
+ font-weight:bold;
+ color: green;
+}
+#ceas4{
+  
+	width:250px;
+text-align:center;
+border:5px solid blue;
+border-radius:15px;
+ font-size: 50px;
+ font-weight:bold;
+ color: green;
+}
+</style>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('ceas').innerHTML=h+":"+m+":"+s;
+document.getElementById('ceas2').innerHTML=h+":"+m+":"+s;
+document.getElementById('ceas3').innerHTML=h+":"+m+":"+s;
+document.getElementById('ceas4').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt">
+<div id="ceas"></div>
+<div id="ceas2"></div>
+<div id="ceas3"></div>
+<p>Timpul are prostul obicei de a fi ireversibil. (Octavian Pavel)
+</p>
+</div>
+
+<div id="ceas4"></div>
+</body>
+</html>

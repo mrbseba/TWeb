@@ -1,0 +1,54 @@
+<!-- 6. De schimbat documentul dat în aşa mod că dacă facem click pe un link imaginea corespunzătoare să se schimbe pe img4.jpg. -->
+
+<html>
+<head>
+
+<script type="text/javascript">
+
+  function preload(name, first, second) {
+  if (browserOK) {
+    pics[objCount] = new Array(3);
+    pics[objCount][0] = new Image();
+    pics[objCount][0].src = first;
+    pics[objCount][1] = new Image();
+    pics[objCount][1].src = second;
+    pics[objCount][2] = name;
+    objCount++;
+  }
+}
+function on(name) {
+  if (browserOK) {
+    for (i = 0; i < objCount; i++) {
+      if (document.images[pics[i][2]] != null)
+      if (name != pics[i][2]) {
+        document.images[pics[i][2]].src = pics[i][0].src;
+      } else {
+      // afiseaza cea de-a doua imagine la pozitionarea cursorului deasupra acesteia
+        document.images[pics[i][2]].src = pics[i][1].src;
+      }
+    }
+  }
+}
+function off() {
+  if (browserOK) {
+    for (i = 0; i < objCount; i++) {
+      if (document.images[pics[i][2]] != null)
+        document.images[pics[i][2]].src = pics[i][0].src;
+    }
+  }
+}
+preload("link1", "img1a.jpg", "img2a.jpg");
+preload("link2", "img2a.jpg", "img4a.jpg");
+preload("link3", "img3a.jpg", "img4a.jpg");
+</script>
+</head>
+
+<body>
+<a href="adresa1.html" onMouseOver="on('link1')" onMouseOut="off()">
+  <img name="link1" src="img1a.jpg" width="150" height="150" border="0"></a> &nbsp; 
+<a href="adresa2.html" onMouseOver="on('link2')" onMouseOut="off()">
+  <img name="link2" src="img2a.jpg" width="200" height="150" border="0"></a> &nbsp; 
+<a href="adresa2.html" onMouseOver="on('link3')" onMouseOut="off()">
+  <img name="link3" src="img3a.jpg" width="200" height="150" border="0"></a>
+</body>
+</html>

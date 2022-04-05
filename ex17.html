@@ -1,0 +1,37 @@
+<!-- 8. De schimbat documentul dat în aşa mod că dacă parola introdusă este egală cu textul din primul cîmp de editare să apară un alert.   -->
+
+<HTML>
+<HEAD>
+<TITLE>Exemplu de FORMULAR</TITLE>
+
+<SCRIPT language="Javascript">
+
+
+function writePass()
+{
+    n=window.document.myform.exemplu1.value;
+    n1=window.document.myform.exemplu2.value;
+    if(n == n1)
+    alert("textul conicide");
+}
+
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+
+ <div>
+<h3> Exemplu de formular</h3>
+  <form  name="myform" > 
+  <p> <input name="exemplu1" type="text" value="Camp de editare"  size="25" maxlength="30"/> &nbsp;&nbsp;&nbsp; 
+  <span id="content">&nbsp;&nbsp;&nbsp;</span></p> 
+  <p> <input name="exemplu2" type="password" value="Parola" onBlur="writePass()" size="15" maxlength="15"/></p>
+
+  </form>
+    
+ </div> 
+
+</BODY>
+</HTML>
